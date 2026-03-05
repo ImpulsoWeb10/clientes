@@ -3,40 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="google-site-verification" content="COLOQUE_AQUI_SE_FOR_USAR" />
 
-<title>ESPECIALISTA_EM_[SERVIÇO_PRINCIPAL]. AGILIDADE, SEGURANÇA E ZERO BUROCRACIA.</title>
+<title><!-- TITULO DA PÁGINA AQUI --></title>
 
-<meta name="description" content="EMPRESA em CIDADE especializado em SERVIÇOS_OFERECIDOS. Atendimento rápido via WhatsApp.">
+<meta name="description" content="<!-- DESCRIPTION / RESUMO DO SERVIÇO AQUI -->">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="EMPRESA em CIDADE | NOME_EMPRESA">
-<meta property="og:description" content="SERVIÇOS_OFERECIDOS em CIDADE. Atendimento rápido e seguro via WhatsApp.">
-<meta property="og:url" content="https://SEUUSUARIO.github.io/NOME-DO-REPOSITORIO/">
-<meta property="og:image" content="https://SEUUSUARIO.github.io/NOME-DO-REPOSITORIO/img/IMAGEM.jpg">
+<meta property="og:title" content="<!-- OG TITLE AQUI -->">
+<meta property="og:description" content="<!-- OG DESCRIPTION AQUI -->">
+<meta property="og:url" content="<!-- URL DA PÁGINA AQUI -->">
+<meta property="og:image" content="<!-- URL DA IMAGEM OG AQUI -->">
 <meta property="og:locale" content="pt_BR">
 
 <style>
-
-/* TODO O SEU CSS PERMANECE EXATAMENTE IGUAL */
+/* === SEU CSS EXATAMENTE COMO ESTAVA === */
 *{margin:0;padding:0;box-sizing:border-box;}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color:#f4f6f8;
-    text-align:center;
-}
-
-.container{
-    max-width:1100px;
-    margin:0 auto;
-    padding:0 20px;
-}
-
-/* HEADER */
+body {font-family: Arial, sans-serif;background-color:#f4f6f8;text-align:center;}
+.container{max-width:1100px;margin:0 auto;padding:0 20px;}
 header {
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-                url('img/IMAGEM-HEADER.jpg') center/cover no-repeat;
+                url('img/<!-- IMAGEM HEADER -->.jpg') center/cover no-repeat;
     color:white;
     padding:140px 20px;
     position:relative;
@@ -48,51 +34,33 @@ header::before{
     background:rgba(10,31,68,0.60);
 }
 header .container{position:relative;z-index:1;}
-header h1{
-    margin-bottom:20px;
-    font-size:42px;
-    font-weight:800;
-    letter-spacing:1px;
-}
-header p{
-    margin-bottom:35px;
-    font-size:20px;
-    opacity:0.95;
-}
-
-/* BOTÃO */
-.btn-whatsapp{
-    background:#25D366;
-    color:white;
-    padding:16px 35px;
-    text-decoration:none;
-    border-radius:50px;
-    font-weight:bold;
-    display:inline-block;
-    position:relative;
-    overflow:hidden;
-    box-shadow:0 8px 25px rgba(0,0,0,0.3);
-    transition:all 0.3s ease;
-}
-.btn-whatsapp:hover{
-    transform:translateY(-4px);
-    box-shadow:0 12px 30px rgba(0,0,0,0.4);
-}
-
-/* RESTANTE DO CSS PERMANECE IGUAL AO SEU ORIGINAL */
-/* (mantive resumido aqui para não repetir 100% visualmente,
-mas você deve manter exatamente o mesmo CSS que enviou) */
-
+header h1{margin-bottom:20px;font-size:42px;font-weight:800;letter-spacing:1px;}
+header p{margin-bottom:35px;font-size:20px;opacity:0.95;}
+.btn-whatsapp{background:#25D366;color:white;padding:16px 35px;text-decoration:none;border-radius:50px;font-weight:bold;display:inline-block;position:relative;overflow:hidden;box-shadow:0 8px 25px rgba(0,0,0,0.3);transition:all 0.3s ease;}
+.btn-whatsapp:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,0.4);}
+section{padding:70px 20px;}
+.servicos{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin-top:30px;}
+.card{background:white;padding:25px;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,0.1);display:flex;flex-direction:column;justify-content:space-between;cursor:pointer;transition:0.3s;}
+.card:hover{transform:translateY(-5px);}
+.avaliacoes{background:linear-gradient(rgba(10,31,68,0.8),rgba(10,31,68,0.8)),url('img/estrela.jpg');background-size:cover;background-position:center;color:white;}
+.estrelas{font-size:28px;color:#f4b400;}
+.estrelas span{opacity:0;display:inline-block;transform:scale(0.5);animation:aparecerEstrela 0.6s forwards;}
+@keyframes aparecerEstrela{to{opacity:1;transform:scale(1);}}
+footer{background:#0a1f44;color:white;padding:30px 20px;}
+.whatsapp-float{position:fixed;width:60px;height:60px;bottom:20px;right:20px;background:#25D366;color:white;border-radius:50%;text-align:center;font-size:30px;line-height:60px;text-decoration:none;box-shadow:0 4px 10px rgba(0,0,0,0.3);}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);justify-content:center;align-items:center;z-index:999;}
+.modal-conteudo{background:white;padding:30px;border-radius:12px;max-width:500px;width:90%;text-align:center;position:relative;}
+.fechar{position:absolute;top:15px;right:20px;font-size:24px;cursor:pointer;}
 </style>
-</head>
 
+</head>
 <body>
 
 <header>
 <div class="container">
-<h1>NOME_EMPRESA</h1>
-<p>ESPECIALISTA_EM_[SERVIÇO_PRINCIPAL]. AGILIDADE, SEGURANÇA E ZERO BUROCRACIA.</p>
-<a class="btn-whatsapp" href="https://wa.me/55DDDNUMERO" target="_blank">
+<h1><!-- NOME DA EMPRESA AQUI --></h1>
+<p><!-- SLOGAN OU DESCRIÇÃO PRINCIPAL --></p>
+<a class="btn-whatsapp" href="<!-- LINK DO WHATSAPP (https://wa.me/55DDDNUMERO) -->" target="_blank">
 FALAR NO WHATSAPP
 </a>
 </div>
@@ -105,23 +73,23 @@ FALAR NO WHATSAPP
 <div class="servicos">
 
 <div class="card" onclick="abrirModal('servico1')">
-<h3>NOME_DO_SERVIÇO_1</h3>
-<p>DESCRIÇÃO_DO_SERVIÇO_1</p>
+<h3><!-- SERVIÇO 1 --></h3>
+<p><!-- DESCRIÇÃO SERVIÇO 1 --></p>
 </div>
 
 <div class="card" onclick="abrirModal('servico2')">
-<h3>NOME_DO_SERVIÇO_2</h3>
-<p>DESCRIÇÃO_DO_SERVIÇO_2</p>
+<h3><!-- SERVIÇO 2 --></h3>
+<p><!-- DESCRIÇÃO SERVIÇO 2 --></p>
 </div>
 
 <div class="card" onclick="abrirModal('servico3')">
-<h3>NOME_DO_SERVIÇO_3</h3>
-<p>DESCRIÇÃO_DO_SERVIÇO_3</p>
+<h3><!-- SERVIÇO 3 --></h3>
+<p><!-- DESCRIÇÃO SERVIÇO 3 --></p>
 </div>
 
 <div class="card" onclick="abrirModal('servico4')">
-<h3>NOME_DO_SERVIÇO_4</h3>
-<p>DESCRIÇÃO_DO_SERVIÇO_4</p>
+<h3><!-- SERVIÇO 4 --></h3>
+<p><!-- DESCRIÇÃO SERVIÇO 4 --></p>
 </div>
 
 </div>
@@ -134,36 +102,33 @@ FALAR NO WHATSAPP
 <p class="estrelas">
 <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 </p>
-<p>NOTA_EX: 5.0 de 5 estrelas no Google</p>
-<a href="LINK_DAS_AVALIACOES_GOOGLE"
-   target="_blank"
-   class="btn-avaliacoes">
-   ⭐ Ver Avaliações no Google
+<p><!-- AVALIAÇÃO EX: 5.0 de 5 estrelas no Google --></p>
+<a href="<!-- LINK PARA AVALIAÇÕES -->" target="_blank" class="btn-avaliacoes">
+⭐ Ver Avaliações no Google
 </a>
 </div>
 </section>
 
 <footer>
 <div class="container">
-    <p><strong>NOME_EMPRESA</strong></p>
-    <p>Atendimento em CIDADE - ESTADO</p>
-    <p>WhatsApp: (DDD) NUMERO</p>
-    <p>E-mail: EMAIL@EMPRESA.COM</p>
-    <p>🔒 Site Seguro com Certificado SSL</p>
-    <p>© ANO_ATUAL Todos os direitos reservados</p>
+<p><strong><!-- NOME DA EMPRESA AQUI --></strong></p>
+<p><!-- ATENDIMENTO LOCALIDADE --></p>
+<p>WhatsApp: <!-- (DD) NÚMERO --></p>
+<p>E-mail: <!-- EMAIL DA EMPRESA --></p>
+<p>🔒 Site Seguro com Certificado SSL</p>
+<p>© <!-- ANO --> Todos os direitos reservados</p>
 </div>
 </footer>
 
-<a href="https://wa.me/55DDDNUMERO" target="_blank" class="whatsapp-float">💬</a>
+<a href="<!-- LINK DO WHATSAPP Floater -->" target="_blank" class="whatsapp-float">💬</a>
 
-<!-- MODAL -->
 <div id="modal" class="modal">
 <div class="modal-conteudo">
 <span class="fechar" onclick="fecharModal()">&times;</span>
 <h3 id="modal-titulo"></h3>
 <p id="modal-texto"></p>
 <br>
-<a href="https://wa.me/55DDDNUMERO" target="_blank" class="btn-whatsapp">
+<a href="<!-- LINK DO WHATSAPP NO MODAL -->" target="_blank" class="btn-whatsapp">
 Falar no WhatsApp
 </a>
 </div>
@@ -174,22 +139,10 @@ function abrirModal(tipo){
 const titulo=document.getElementById("modal-titulo");
 const texto=document.getElementById("modal-texto");
 
-if(tipo==="servico1"){
-titulo.innerText="NOME_DO_SERVIÇO_1";
-texto.innerText="DESCRIÇÃO_COMPLETA_DO_SERVIÇO_1";
-}
-if(tipo==="servico2"){
-titulo.innerText="NOME_DO_SERVIÇO_2";
-texto.innerText="DESCRIÇÃO_COMPLETA_DO_SERVIÇO_2";
-}
-if(tipo==="servico3"){
-titulo.innerText="NOME_DO_SERVIÇO_3";
-texto.innerText="DESCRIÇÃO_COMPLETA_DO_SERVIÇO_3";
-}
-if(tipo==="servico4"){
-titulo.innerText="NOME_DO_SERVIÇO_4";
-texto.innerText="DESCRIÇÃO_COMPLETA_DO_SERVIÇO_4";
-}
+if(tipo==="servico1"){titulo.innerText="<!-- SERVIÇO 1 -->";texto.innerText="<!-- DESCRIÇÃO COMPLETA SERVIÇO 1 -->";}
+if(tipo==="servico2"){titulo.innerText="<!-- SERVIÇO 2 -->";texto.innerText="<!-- DESCRIÇÃO COMPLETA SERVIÇO 2 -->";}
+if(tipo==="servico3"){titulo.innerText="<!-- SERVIÇO 3 -->";texto.innerText="<!-- DESCRIÇÃO COMPLETA SERVIÇO 3 -->";}
+if(tipo==="servico4"){titulo.innerText="<!-- SERVIÇO 4 -->";texto.innerText="<!-- DESCRIÇÃO COMPLETA SERVIÇO 4 -->";}
 
 document.getElementById("modal").style.display="flex";
 }

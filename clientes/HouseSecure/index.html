@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>House Secure Segurança Eletrônica | Proteção Inteligente</title>
-
 <meta name="description" content="Soluções em Controle de Acesso, CFTV e Alarmes em Itaquaquecetuba. Proteção inteligente para empresas e residências.">
 
 <style>
@@ -28,19 +27,27 @@ header{
 background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
 url('https://images.unsplash.com/photo-1581091215367-59ab6f7f3e6f') center/cover no-repeat;
 color:white;
-padding:140px 20px;
+padding:120px 20px;
 position:relative;
 }
 header::before{
 content:"";
 position:absolute;
 inset:0;
-background:rgba(10,31,68,0.60);
+background:rgba(10,31,68,0.65);
 }
 header .container{position:relative;z-index:1;}
+
+.logo{
+margin-bottom:25px;
+}
+.logo img{
+max-width:180px;
+}
+
 header h1{
 margin-bottom:20px;
-font-size:40px;
+font-size:38px;
 font-weight:800;
 }
 header p{
@@ -48,7 +55,7 @@ margin-bottom:35px;
 font-size:20px;
 }
 
-/* BOTÃO WHATS PREMIUM */
+/* BOTÃO WHATS */
 .btn-whatsapp{
 background:#25D366;
 color:white;
@@ -86,17 +93,15 @@ animation:brilho 2.5s infinite;
 100%{transform:scale(1);}
 }
 
-/* SECTIONS */
+/* SECTION */
 section{padding:70px 20px;}
 
-/* FRASE NO LUGAR DE SERVIÇOS */
 .pergunta{
 font-size:24px;
 font-weight:bold;
 margin-bottom:40px;
 }
 
-/* BOTÕES */
 .opcoes{
 display:flex;
 flex-wrap:wrap;
@@ -127,10 +132,10 @@ background-position:center;
 color:white;
 }
 
-/* ESTRELAS LOOP */
 .estrelas{
 font-size:28px;
 color:#f4b400;
+margin:15px 0;
 }
 
 .estrelas span{
@@ -150,7 +155,7 @@ animation:loopEstrela 1.5s infinite;
 100%{transform:scale(1);opacity:0.6;}
 }
 
-/* BOTÃO PREMIUM AMARELO */
+/* BOTÃO AVALIAÇÃO */
 .btn-avaliacoes{
 display:inline-block;
 margin-top:25px;
@@ -171,34 +176,93 @@ box-shadow:0 6px 18px rgba(0,0,0,0.3);
 100%{transform:scale(1);}
 }
 
-.btn-avaliacoes:hover{
-background:#ffcc00;
-color:#000;
-}
-
 .btn-avaliacoes.clicked{
 background:#25D366;
 color:white;
 animation:none;
 }
+
+/* MAPA */
+iframe{
+width:100%;
+border:0;
+border-radius:10px;
+}
+
+/* FOOTER */
+footer{
+background:#0a1f44;
+color:white;
+padding:30px 20px;
+}
+
+/* WHATS FLOAT */
+.whatsapp-float{
+position:fixed;
+width:60px;
+height:60px;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+border-radius:50%;
+text-align:center;
+font-size:30px;
+line-height:60px;
+text-decoration:none;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* MODAL */
+.modal{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,0.6);
+justify-content:center;
+align-items:center;
+z-index:999;
+}
+
+.modal-conteudo{
+background:white;
+padding:30px;
+border-radius:12px;
+max-width:500px;
+width:90%;
+text-align:center;
+position:relative;
+}
+
+.fechar{
+position:absolute;
+top:15px;
+right:20px;
+font-size:24px;
+cursor:pointer;
+}
 </style>
 </head>
-<script>
-document.getElementById("btn-avaliacao").addEventListener("click", function(){
-this.classList.add("clicked");
-});
-</script>
+
 <body>
 
 <header>
 <div class="container">
+
+<div class="logo">
+<!-- COLOQUE AQUI SUA LOGO -->
+<img src="logo.png" alt="House Secure">
+</div>
+
 <h1>House Secure Segurança Eletrônica</h1>
 <p>Proteção inteligente para quem valoriza o que realmente importa.</p>
-<a class="btn-whatsapp" 
-href="https://wa.me/5511977788270?text=Olá,%20quero%20proteger%20meu%20patrimônio%20com%20a%20House%20Secure" 
+
+<a class="btn-whatsapp"
+href="https://wa.me/5511977788270?text=Olá,%20quero%20proteger%20meu%20patrimônio"
 target="_blank">
 FALAR NO WHATSAPP
 </a>
+
 </div>
 </header>
 
@@ -235,10 +299,10 @@ Qual a melhor forma de proteger o que é importante para você hoje?
 <p>5.0 de 5 estrelas no Google</p>
 
 <a href="https://g.page/r/CeL4xMoSMFRqEAE/review"
-   target="_blank"
-   id="btn-avaliacao"
-   class="btn-avaliacoes">
-   ⭐ Ver Avaliações no Google
+target="_blank"
+id="btn-avaliacao"
+class="btn-avaliacoes">
+⭐ Ver Avaliações no Google
 </a>
 
 </div>
@@ -258,9 +322,8 @@ height="300">
 <footer>
 <div class="container">
 <p><strong>House Secure Segurança Eletrônica</strong></p>
-<p>📍 R. Francisco Alves, 109 - sala 2 - Jardim Itaqua, Itaquaquecetuba - SP, 08580-190</p>
+<p>📍 R. Francisco Alves, 109 - sala 2 - Itaquaquecetuba - SP</p>
 <p>📞 WhatsApp: (11) 97778-8270</p>
-<p>🔒 Site Seguro com Certificado SSL</p>
 <p>© 2026 Todos os direitos reservados</p>
 </div>
 </footer>
@@ -288,20 +351,20 @@ let botao=document.getElementById("modal-botao");
 
 if(tipo==="controle"){
 titulo.innerText="Controle de Acesso";
-texto.innerText="Gerencie quem entra e sai do seu ambiente com tecnologia moderna, biometria e total segurança.";
-botao.href="https://wa.me/5511977788270?text=Olá,%20quero%20instalar%20Controle%20de%20Acesso";
+texto.innerText="Gerencie entradas com biometria, senha ou cartão, garantindo segurança total.";
+botao.href="https://wa.me/5511977788270?text=Quero%20instalar%20Controle%20de%20Acesso";
 }
 
 if(tipo==="cftv"){
 titulo.innerText="CFTV";
-texto.innerText="Monitore sua empresa ou residência 24h por dia com câmeras de alta definição e acesso remoto.";
-botao.href="https://wa.me/5511977788270?text=Olá,%20quero%20instalar%20CFTV";
+texto.innerText="Monitoramento 24h com câmeras em alta definição e acesso remoto.";
+botao.href="https://wa.me/5511977788270?text=Quero%20instalar%20CFTV";
 }
 
 if(tipo==="alarmes"){
 titulo.innerText="Alarmes";
-texto.innerText="Sistemas de alarme inteligentes para detectar qualquer tentativa de invasão em tempo real.";
-botao.href="https://wa.me/5511977788270?text=Olá,%20quero%20instalar%20Alarmes";
+texto.innerText="Sistema inteligente que detecta invasões e dispara alertas imediatos.";
+botao.href="https://wa.me/5511977788270?text=Quero%20instalar%20Alarmes";
 }
 
 document.getElementById("modal").style.display="flex";
@@ -310,6 +373,10 @@ document.getElementById("modal").style.display="flex";
 function fecharModal(){
 document.getElementById("modal").style.display="none";
 }
+
+document.getElementById("btn-avaliacao").addEventListener("click", function(){
+this.classList.add("clicked");
+});
 </script>
 
 </body>

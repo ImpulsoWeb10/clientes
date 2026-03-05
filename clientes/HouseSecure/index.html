@@ -4,13 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>House Secure Segurança Eletrônica | Proteção e Monitoramento</title>
+<title>House Secure Segurança Eletrônica | Proteja o que é importante</title>
 
-<meta name="description" content="Controle de acesso, CFTV e alarmes em Itaquaquecetuba. Segurança eletrônica profissional para empresas e residências.">
+<meta name="description" content="Controle de Acesso, CFTV e Alarmes em Itaquaquecetuba. Segurança eletrônica profissional.">
 
 <style>
-
-/* RESET */
 *{margin:0;padding:0;box-sizing:border-box;}
 
 body{
@@ -27,28 +25,32 @@ body{
 
 /* HEADER */
 header{
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-                url('img/seguranca.jpg') center/cover no-repeat;
+    background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
+               url('img/seguranca.jpg') center/cover no-repeat;
     color:white;
-    padding:140px 20px;
+    padding:120px 20px;
+}
+
+.logo{
+    max-width:180px;
+    margin-bottom:25px;
 }
 
 header h1{
-    font-size:40px;
+    font-size:38px;
     margin-bottom:20px;
-    font-weight:800;
 }
 
 header p{
-    font-size:20px;
-    margin-bottom:30px;
+    font-size:22px;
+    margin-bottom:35px;
 }
 
-/* BOTÃO WHATSAPP PREMIUM */
-.btn-whatsapp{
+/* BOTÃO PRINCIPAL */
+.btn-principal{
     background:#25D366;
     color:white;
-    padding:16px 35px;
+    padding:18px 40px;
     text-decoration:none;
     border-radius:50px;
     font-weight:bold;
@@ -56,11 +58,9 @@ header p{
     position:relative;
     overflow:hidden;
     animation:pulse 2s infinite;
-    box-shadow:0 8px 25px rgba(0,0,0,0.3);
 }
 
-/* brilho passando */
-.btn-whatsapp::before{
+.btn-principal::before{
     content:"";
     position:absolute;
     top:0;
@@ -83,43 +83,69 @@ header p{
     100%{transform:scale(1);}
 }
 
-/* SEÇÕES */
-section{padding:70px 20px;}
-
-.servicos{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-    margin-top:30px;
+/* MODAL */
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.6);
+    justify-content:center;
+    align-items:center;
+    z-index:999;
 }
 
-.card{
+.modal-conteudo{
     background:white;
-    padding:30px;
+    padding:40px;
     border-radius:12px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.1);
-    transition:0.3s;
+    max-width:500px;
+    width:90%;
+    text-align:center;
+    position:relative;
 }
 
-.card:hover{
-    transform:translateY(-5px);
+.fechar{
+    position:absolute;
+    top:15px;
+    right:20px;
+    font-size:24px;
+    cursor:pointer;
 }
 
-/* FOOTER */
+.btn-opcao{
+    display:block;
+    margin:15px 0;
+    padding:14px;
+    background:#0a1f44;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.btn-whatsapp{
+    margin-top:20px;
+    display:inline-block;
+    padding:14px 30px;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:bold;
+}
+
+/* MAPA */
+.mapa{
+    margin-top:60px;
+}
+
 footer{
     background:#0a1f44;
     color:white;
     padding:40px 20px;
+    margin-top:40px;
 }
 
-.selo{
-    margin-top:20px;
-    font-weight:bold;
-    font-size:14px;
-    opacity:0.9;
-}
-
-/* WHATS FLOAT */
 .whatsapp-float{
     position:fixed;
     width:60px;
@@ -133,15 +159,7 @@ footer{
     font-size:30px;
     line-height:60px;
     text-decoration:none;
-    box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
-
-@media(max-width:768px){
-    header{padding:70px 15px;}
-    header h1{font-size:26px;}
-    header p{font-size:16px;}
-}
-
 </style>
 </head>
 
@@ -149,60 +167,105 @@ footer{
 
 <header>
 <div class="container">
-<h1>House Secure Segurança Eletrônica</h1>
-<p>Proteção inteligente para empresas e residências.</p>
 
-<a class="btn-whatsapp" 
-href="https://wa.me/5511977788270" 
-target="_blank">
-FALAR NO WHATSAPP
+<img src="img/logo.png" alt="House Secure" class="logo">
+
+<h1>House Secure Segurança Eletrônica</h1>
+
+<p>Qual a melhor forma de proteger o que é importante para você hoje?</p>
+
+<a class="btn-principal" onclick="abrirModal('menu')">
+ESCOLHER SOLUÇÃO
 </a>
 
 </div>
 </header>
 
-<section>
-<div class="container">
-<h2>Serviços</h2>
+<!-- MODAL PRINCIPAL -->
+<div id="modal" class="modal">
+<div class="modal-conteudo">
+<span class="fechar" onclick="fecharModal()">&times;</span>
 
-<div class="servicos">
+<div id="modal-conteudo-dinamico">
 
-<div class="card">
-<h3>Controle de Acesso</h3>
-<p>Soluções modernas para controle de entrada e saída com segurança e praticidade.</p>
-</div>
+<h3>Escolha uma solução:</h3>
 
-<div class="card">
-<h3>CFTV</h3>
-<p>Monitoramento por câmeras em tempo real para proteção total do seu patrimônio.</p>
-</div>
+<div class="btn-opcao" onclick="abrirModal('acesso')">Controle de Acesso</div>
+<div class="btn-opcao" onclick="abrirModal('cftv')">CFTV</div>
+<div class="btn-opcao" onclick="abrirModal('alarmes')">Alarmes</div>
 
-<div class="card">
-<h3>Alarmes</h3>
-<p>Sistemas de alarme inteligentes que garantem resposta rápida contra invasões.</p>
 </div>
 
 </div>
 </div>
-</section>
+
+<!-- MAPA -->
+<div class="mapa">
+<iframe
+src="https://www.google.com/maps?q=R.+Francisco+Alves,+109+-+sala+2+-+Jardim+Itaqua,+Itaquaquecetuba+-+SP,+08580-190&output=embed"
+width="100%"
+height="350"
+style="border:0;"
+allowfullscreen=""
+loading="lazy">
+</iframe>
+</div>
 
 <footer>
-<div class="container">
-
 <p><strong>House Secure Segurança Eletrônica</strong></p>
-
 <p>Telefone: (11) 97778-8270</p>
-
-<p>Endereço: R. Francisco Alves, 109 - sala 2 - Jardim Itaqua, Itaquaquecetuba - SP, 08580-190</p>
-
-<p class="selo">🔒 Selo de Qualidade SLL | Segurança Certificada</p>
-
+<p>R. Francisco Alves, 109 - sala 2 - Jardim Itaqua, Itaquaquecetuba - SP, 08580-190</p>
+<p>🔒 Selo de Qualidade SLL</p>
 <p>© 2026 Todos os direitos reservados</p>
-
-</div>
 </footer>
 
 <a href="https://wa.me/5511977788270" target="_blank" class="whatsapp-float">💬</a>
+
+<script>
+function abrirModal(tipo){
+const modal=document.getElementById("modal");
+const conteudo=document.getElementById("modal-conteudo-dinamico");
+
+modal.style.display="flex";
+
+if(tipo==="menu"){
+conteudo.innerHTML=`
+<h3>Escolha uma solução:</h3>
+<div class="btn-opcao" onclick="abrirModal('acesso')">Controle de Acesso</div>
+<div class="btn-opcao" onclick="abrirModal('cftv')">CFTV</div>
+<div class="btn-opcao" onclick="abrirModal('alarmes')">Alarmes</div>
+`;
+}
+
+if(tipo==="acesso"){
+conteudo.innerHTML=`
+<h3>Controle de Acesso</h3>
+<p>Sistemas inteligentes que controlam entradas e saídas, garantindo segurança total para empresas e condomínios.</p>
+<a href="https://wa.me/5511977788270" target="_blank" class="btn-whatsapp">Falar no WhatsApp</a>
+`;
+}
+
+if(tipo==="cftv"){
+conteudo.innerHTML=`
+<h3>CFTV</h3>
+<p>Monitoramento por câmeras em tempo real, com gravação e acesso remoto pelo celular.</p>
+<a href="https://wa.me/5511977788270" target="_blank" class="btn-whatsapp">Falar no WhatsApp</a>
+`;
+}
+
+if(tipo==="alarmes"){
+conteudo.innerHTML=`
+<h3>Alarmes</h3>
+<p>Sistemas de alarme com sensores modernos para proteger seu patrimônio contra invasões.</p>
+<a href="https://wa.me/5511977788270" target="_blank" class="btn-whatsapp">Falar no WhatsApp</a>
+`;
+}
+}
+
+function fecharModal(){
+document.getElementById("modal").style.display="none";
+}
+</script>
 
 </body>
 </html>

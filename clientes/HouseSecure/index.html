@@ -4,65 +4,160 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title><!-- TITULO DA PÁGINA AQUI --></title>
+<title>House Secure Segurança Eletrônica | Proteção e Monitoramento</title>
 
-<meta name="description" content="<!-- DESCRIPTION / RESUMO DO SERVIÇO AQUI -->">
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="<!-- OG TITLE AQUI -->">
-<meta property="og:description" content="<!-- OG DESCRIPTION AQUI -->">
-<meta property="og:url" content="<!-- URL DA PÁGINA AQUI -->">
-<meta property="og:image" content="<!-- URL DA IMAGEM OG AQUI -->">
-<meta property="og:locale" content="pt_BR">
+<meta name="description" content="Controle de acesso, CFTV e alarmes em Itaquaquecetuba. Segurança eletrônica profissional para empresas e residências.">
 
 <style>
-/* === SEU CSS EXATAMENTE COMO ESTAVA === */
+
+/* RESET */
 *{margin:0;padding:0;box-sizing:border-box;}
-body {font-family: Arial, sans-serif;background-color:#f4f6f8;text-align:center;}
-.container{max-width:1100px;margin:0 auto;padding:0 20px;}
-header {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-                url('img/<!-- IMAGEM HEADER -->.jpg') center/cover no-repeat;
+
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f6f8;
+    text-align:center;
+}
+
+.container{
+    max-width:1100px;
+    margin:0 auto;
+    padding:0 20px;
+}
+
+/* HEADER */
+header{
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                url('img/seguranca.jpg') center/cover no-repeat;
     color:white;
     padding:140px 20px;
-    position:relative;
 }
-header::before{
+
+header h1{
+    font-size:40px;
+    margin-bottom:20px;
+    font-weight:800;
+}
+
+header p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+/* BOTÃO WHATSAPP PREMIUM */
+.btn-whatsapp{
+    background:#25D366;
+    color:white;
+    padding:16px 35px;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:bold;
+    display:inline-block;
+    position:relative;
+    overflow:hidden;
+    animation:pulse 2s infinite;
+    box-shadow:0 8px 25px rgba(0,0,0,0.3);
+}
+
+/* brilho passando */
+.btn-whatsapp::before{
     content:"";
     position:absolute;
-    inset:0;
-    background:rgba(10,31,68,0.60);
+    top:0;
+    left:-75%;
+    width:50%;
+    height:100%;
+    background:rgba(255,255,255,0.4);
+    transform:skewX(-20deg);
+    animation:brilho 2.5s infinite;
 }
-header .container{position:relative;z-index:1;}
-header h1{margin-bottom:20px;font-size:42px;font-weight:800;letter-spacing:1px;}
-header p{margin-bottom:35px;font-size:20px;opacity:0.95;}
-.btn-whatsapp{background:#25D366;color:white;padding:16px 35px;text-decoration:none;border-radius:50px;font-weight:bold;display:inline-block;position:relative;overflow:hidden;box-shadow:0 8px 25px rgba(0,0,0,0.3);transition:all 0.3s ease;}
-.btn-whatsapp:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,0.4);}
-section{padding:70px 20px;}
-.servicos{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin-top:30px;}
-.card{background:white;padding:25px;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,0.1);display:flex;flex-direction:column;justify-content:space-between;cursor:pointer;transition:0.3s;}
-.card:hover{transform:translateY(-5px);}
-.avaliacoes{background:linear-gradient(rgba(10,31,68,0.8),rgba(10,31,68,0.8)),url('img/estrela.jpg');background-size:cover;background-position:center;color:white;}
-.estrelas{font-size:28px;color:#f4b400;}
-.estrelas span{opacity:0;display:inline-block;transform:scale(0.5);animation:aparecerEstrela 0.6s forwards;}
-@keyframes aparecerEstrela{to{opacity:1;transform:scale(1);}}
-footer{background:#0a1f44;color:white;padding:30px 20px;}
-.whatsapp-float{position:fixed;width:60px;height:60px;bottom:20px;right:20px;background:#25D366;color:white;border-radius:50%;text-align:center;font-size:30px;line-height:60px;text-decoration:none;box-shadow:0 4px 10px rgba(0,0,0,0.3);}
-.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);justify-content:center;align-items:center;z-index:999;}
-.modal-conteudo{background:white;padding:30px;border-radius:12px;max-width:500px;width:90%;text-align:center;position:relative;}
-.fechar{position:absolute;top:15px;right:20px;font-size:24px;cursor:pointer;}
-</style>
 
+@keyframes brilho{
+    0%{left:-75%;}
+    100%{left:125%;}
+}
+
+@keyframes pulse{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.05);}
+    100%{transform:scale(1);}
+}
+
+/* SEÇÕES */
+section{padding:70px 20px;}
+
+.servicos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    margin-top:30px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+/* FOOTER */
+footer{
+    background:#0a1f44;
+    color:white;
+    padding:40px 20px;
+}
+
+.selo{
+    margin-top:20px;
+    font-weight:bold;
+    font-size:14px;
+    opacity:0.9;
+}
+
+/* WHATS FLOAT */
+.whatsapp-float{
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    border-radius:50%;
+    text-align:center;
+    font-size:30px;
+    line-height:60px;
+    text-decoration:none;
+    box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+@media(max-width:768px){
+    header{padding:70px 15px;}
+    header h1{font-size:26px;}
+    header p{font-size:16px;}
+}
+
+</style>
 </head>
+
 <body>
 
 <header>
 <div class="container">
-<h1><!-- NOME DA EMPRESA AQUI --></h1>
-<p><!-- SLOGAN OU DESCRIÇÃO PRINCIPAL --></p>
-<a class="btn-whatsapp" href="<!-- LINK DO WHATSAPP (https://wa.me/55DDDNUMERO) -->" target="_blank">
+<h1>House Secure Segurança Eletrônica</h1>
+<p>Proteção inteligente para empresas e residências.</p>
+
+<a class="btn-whatsapp" 
+href="https://wa.me/5511977788270" 
+target="_blank">
 FALAR NO WHATSAPP
 </a>
+
 </div>
 </header>
 
@@ -72,85 +167,42 @@ FALAR NO WHATSAPP
 
 <div class="servicos">
 
-<div class="card" onclick="abrirModal('servico1')">
-<h3><!-- SERVIÇO 1 --></h3>
-<p><!-- DESCRIÇÃO SERVIÇO 1 --></p>
+<div class="card">
+<h3>Controle de Acesso</h3>
+<p>Soluções modernas para controle de entrada e saída com segurança e praticidade.</p>
 </div>
 
-<div class="card" onclick="abrirModal('servico2')">
-<h3><!-- SERVIÇO 2 --></h3>
-<p><!-- DESCRIÇÃO SERVIÇO 2 --></p>
+<div class="card">
+<h3>CFTV</h3>
+<p>Monitoramento por câmeras em tempo real para proteção total do seu patrimônio.</p>
 </div>
 
-<div class="card" onclick="abrirModal('servico3')">
-<h3><!-- SERVIÇO 3 --></h3>
-<p><!-- DESCRIÇÃO SERVIÇO 3 --></p>
-</div>
-
-<div class="card" onclick="abrirModal('servico4')">
-<h3><!-- SERVIÇO 4 --></h3>
-<p><!-- DESCRIÇÃO SERVIÇO 4 --></p>
+<div class="card">
+<h3>Alarmes</h3>
+<p>Sistemas de alarme inteligentes que garantem resposta rápida contra invasões.</p>
 </div>
 
 </div>
-</div>
-</section>
-
-<section class="avaliacoes">
-<div class="container">
-<h2>Avaliação dos Clientes</h2>
-<p class="estrelas">
-<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-</p>
-<p><!-- AVALIAÇÃO EX: 5.0 de 5 estrelas no Google --></p>
-<a href="<!-- LINK PARA AVALIAÇÕES -->" target="_blank" class="btn-avaliacoes">
-⭐ Ver Avaliações no Google
-</a>
 </div>
 </section>
 
 <footer>
 <div class="container">
-<p><strong><!-- NOME DA EMPRESA AQUI --></strong></p>
-<p><!-- ATENDIMENTO LOCALIDADE --></p>
-<p>WhatsApp: <!-- (DD) NÚMERO --></p>
-<p>E-mail: <!-- EMAIL DA EMPRESA --></p>
-<p>🔒 Site Seguro com Certificado SSL</p>
-<p>© <!-- ANO --> Todos os direitos reservados</p>
+
+<p><strong>House Secure Segurança Eletrônica</strong></p>
+
+<p>Telefone: (11) 97778-8270</p>
+
+<p>Endereço: R. Francisco Alves, 109 - sala 2 - Jardim Itaqua, Itaquaquecetuba - SP, 08580-190</p>
+
+<p class="selo">🔒 Selo de Qualidade SLL | Segurança Certificada</p>
+
+<p>© 2026 Todos os direitos reservados</p>
+
 </div>
 </footer>
 
-<a href="<!-- LINK DO WHATSAPP Floater -->" target="_blank" class="whatsapp-float">💬</a>
-
-<div id="modal" class="modal">
-<div class="modal-conteudo">
-<span class="fechar" onclick="fecharModal()">&times;</span>
-<h3 id="modal-titulo"></h3>
-<p id="modal-texto"></p>
-<br>
-<a href="<!-- LINK DO WHATSAPP NO MODAL -->" target="_blank" class="btn-whatsapp">
-Falar no WhatsApp
-</a>
-</div>
-</div>
-
-<script>
-function abrirModal(tipo){
-const titulo=document.getElementById("modal-titulo");
-const texto=document.getElementById("modal-texto");
-
-if(tipo==="servico1"){titulo.innerText="<!-- SERVIÇO 1 -->";texto.innerText="<!-- DESCRIÇÃO COMPLETA SERVIÇO 1 -->";}
-if(tipo==="servico2"){titulo.innerText="<!-- SERVIÇO 2 -->";texto.innerText="<!-- DESCRIÇÃO COMPLETA SERVIÇO 2 -->";}
-if(tipo==="servico3"){titulo.innerText="<!-- SERVIÇO 3 -->";texto.innerText="<!-- DESCRIÇÃO COMPLETA SERVIÇO 3 -->";}
-if(tipo==="servico4"){titulo.innerText="<!-- SERVIÇO 4 -->";texto.innerText="<!-- DESCRIÇÃO COMPLETA SERVIÇO 4 -->";}
-
-document.getElementById("modal").style.display="flex";
-}
-
-function fecharModal(){
-document.getElementById("modal").style.display="none";
-}
-</script>
+<a href="https://wa.me/5511977788270" target="_blank" class="whatsapp-float">💬</a>
 
 </body>
 </html>
